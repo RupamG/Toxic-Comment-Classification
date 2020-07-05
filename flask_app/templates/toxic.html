@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Toxic_Comment_classifier</title>
+    <link href="https://fonts.googleapis.com/css2?family=Oleo+Script:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/toxic.css') }}">
+</head>
+<body onload="myFunction()">
+    <div class="container">
+        <div class="heading row">
+            <h1>Toxic Comment Classifier</h1>
+        </div>
+        <div class="subheading row">
+            <h2>Enter a comment to check if it is toxic!</h2>
+        </div>
+        <div class="input row">
+
+            <form action="{{ url_for('predict')}}"method="post">
+                <div class="col-12 in ml-sm-7">
+                    <input id='text' type="text" name="text" placeholder="Enter your comment" required="required" size="37" style="font-size:25px;"/>
+                </div>
+                <div class="col-12 bt">
+                    <button id='button' type="submit" class="btn btn-info  btn-lg"> Predict</button>
+                </div>
+        
+              
+            </form>
+
+        </div>
+        <div class="row op">
+            <h3>{{ pred_tox }} <br><br>
+                {{ pred_sev }} <br><br>
+                {{ pred_obs }} <br><br>
+                {{ pred_ins }} <br><br>
+                {{ pred_thr }} <br><br>
+                {{ pred_ide }}</h3>
+
+        </div>
+        
+
+    </div>
+    
+       
+    
+</body>
+</html>
