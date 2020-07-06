@@ -8,41 +8,41 @@ import numpy as np
 app = Flask(__name__)
 
 # Load the TF-IDF vocabulary specific to the category
-with open(r"toxic_vect.pkl", "rb") as f:
+with open(r"../saved_pickle_files/toxic_vect.pkl", "rb") as f:
     tox = pickle.load(f)
 
-with open(r"severe_toxic_vect.pkl", "rb") as f:
+with open(r"../saved_pickle_files/severe_toxic_vect.pkl", "rb") as f:
     sev = pickle.load(f)
 
-with open(r"obscene_vect.pkl", "rb") as f:
+with open(r"../saved_pickle_files/obscene_vect.pkl", "rb") as f:
     obs = pickle.load(f)
 
-with open(r"insult_vect.pkl", "rb") as f:
+with open(r"../saved_pickle_files/insult_vect.pkl", "rb") as f:
     ins = pickle.load(f)
 
-with open(r"threat_vect.pkl", "rb") as f:
+with open(r"../saved_pickle_files/threat_vect.pkl", "rb") as f:
     thr = pickle.load(f)
 
-with open(r"identity_hate_vect.pkl", "rb") as f:
+with open(r"../saved_pickle_files/identity_hate_vect.pkl", "rb") as f:
     ide = pickle.load(f)
 
 # Load the pickled RDF models
-with open(r"toxic_model.pkl", "rb") as f:
+with open(r"../saved_pickle_files/toxic_model.pkl", "rb") as f:
     tox_model = pickle.load(f)
 
-with open(r"severe_toxic_model.pkl", "rb") as f:
+with open(r"../saved_pickle_files/severe_toxic_model.pkl", "rb") as f:
     sev_model = pickle.load(f)
 
-with open(r"obscene_model.pkl", "rb") as f:
+with open(r"../saved_pickle_files/obscene_model.pkl", "rb") as f:
     obs_model  = pickle.load(f)
 
-with open(r"insult_model.pkl", "rb") as f:
+with open(r"../saved_pickle_files/insult_model.pkl", "rb") as f:
     ins_model  = pickle.load(f)
 
-with open(r"threat_model.pkl", "rb") as f:
+with open(r"../saved_pickle_files/threat_model.pkl", "rb") as f:
     thr_model  = pickle.load(f)
 
-with open(r"identity_hate_model.pkl", "rb") as f:
+with open(r"../saved_pickle_files/identity_hate_model.pkl", "rb") as f:
     ide_model  = pickle.load(f)
 
 # Render the HTML file for the home page
