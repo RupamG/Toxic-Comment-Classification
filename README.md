@@ -1,7 +1,7 @@
 Toxic Comment Classifier project:
 
 Dataset Link:
-https://www.kaggle.com/c/jigsaw-toxic-comment-classification-challenge/data
+https://www.kaggle.com/c/jigsaw-toxic-comment-classification-challenge/data.
 
 Objective:
 Build a multi-headed model capable of detecting and assigning probabilities for different types of of toxicity such as:
